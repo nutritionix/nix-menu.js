@@ -12,7 +12,9 @@
     "jshint-stylish": "^1.0.1"
   },
   "devDependencies": {
-    "grunt-bump": "^0.3.0"
+    "grunt-aws-s3": "^0.12.1",
+    "grunt-bump": "^0.3.0",
+    "grunt-contrib-concat": "^0.5.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

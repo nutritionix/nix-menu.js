@@ -21,14 +21,12 @@
             return 10 * Math.round(cal/10);
         }
     }
-
     // function forEach(query, callback) {
     //     var list = document.querySelectorAll(query);
     //     for (var i = list.length - 1; i >= 0; i--) {
     //         callback(list[i], i);
     //     }
     // }
-
     function nutritionixMenu(opts){
 
         opts.round = opts.round !== void 0 ? opts.round

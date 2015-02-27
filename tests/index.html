@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ent rest test</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <style type="text/css">
+      .calories {
+        display: inline-block;
+        min-height: 20px;
+        min-width: 24px;
+        line-height: 1.42857143;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <h1>Super Awesome Restaurant Menu</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Pizzas</th>
+                                <th>Bugers</th>
+                                <th>Fries</th>
+                                <th>Soft Drinks</th>
+                                <th>Pastries</th>
+                                <th>Crapes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Special Pizza
+                                    <!-- this one will fail without showing cal -->
+                                    <div class="calories" data-nix-item-id='123123'>cal</div>
+                                </td>
+                                <td>Special Buger
+                                    <div class="calories" data-nix-item-id='2-12744'>cal</div>
+                                </td>
+                                <td>Special Fries
+                                    <div class="calories" data-nix-item-id='2-12745'>cal</div>
+                                </td>
+                                <td>Special Coke
+                                    <div class="calories" data-nix-item-id='2-12746'>cal</div>
+                                </td>
+                                <td>Special Brownies
+                                    <div class="calories" data-nix-item-id='2-12747'>cal</div>
+                                </td>
+                                <td>Special Crapes
+                                    <div class="calories" data-nix-item-id='2-12748'>cal</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Uncooked Pizza
+                                    <div class="calories" data-nix-item-id='2-12749'>cal</div>
+                                </td>
+                                <td>Uncooked Buger
+                                    <div class="calories" data-nix-item-id='2-12750'>cal</div>
+                                </td>
+                                <td>Uncooked Fries
+                                    <div class="calories" data-nix-item-id='2-12751'>cal</div>
+                                </td>
+                                <td>Uncooked Coke
+                                    <div class="calories" data-nix-item-id='2-12752'>cal</div>
+                                </td>
+                                <td>Uncooked Brownies
+                                    <div class="calories" data-nix-item-id='2-12754'>cal</div>
+                                </td>
+                                <td>Uncooked Crapes
+                                    <div class="calories" data-nix-item-id='2-12755'>cal</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Liquified Pizza
+                                    <div class="calories" data-nix-item-id='2-12756'>cal</div>
+                                </td>
+                                <td>Liquified Buger
+                                    <div class="calories" data-nix-item-id='2-12757'>cal</div>
+                                </td>
+                                <td>Liquified Fries
+                                    <div class="calories" data-nix-item-id='2-12758'>cal</div>
+                                </td>
+                                <td>Liquified Coke
+                                    <div class="calories" data-nix-item-id='2-12759'>cal</div>
+                                </td>
+                                <td>Liquified Brownies
+                                    <div class="calories" data-nix-item-id='2-12762'>cal</div>
+                                </td>
+                                <td>Liquified Crapes
+                                    <div class="calories" data-nix-item-id='2-12763'>cal</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="nix-menu.min.js"></script>
+    <script type="text/javascript">
+      'use strict';
+      (function(){
+        nutritionixMenu({
+          id:9963,
+          round: true
+        });
+      })();
+    </script>
+</body>
+
+</html>

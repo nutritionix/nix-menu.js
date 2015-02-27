@@ -20,3 +20,5 @@ If you are ready to publish the newest version to the CDN you will need AWS envi
 ```
 grunt publish
 ```
+
+This will publish a new version to Amazon S3 using the package.json version in the file name. `lib/nix-menu-<%= pkg.version %>.min.js`

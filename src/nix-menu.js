@@ -38,8 +38,11 @@
         for (var x = list.length - 1; x >= 0; x--) {
             list[x].style.display = 'none';
         }
+        var s3Url = 'nutritionix-enterprise.s3.amazonaws.com';
+        var cfUrl = 'd2lop6g9xdhvsa.cloudfront.net';
+        var cdnUrl = opts.dev ? s3Url : cfUrl;
+        var endpoint = '//'+cdnUrl+'/'+opts.id+'.json';
 
-        var endpoint = '//d2lop6g9xdhvsa.cloudfront.net/'+opts.id+'.json';
         function Menu(items) {
             this.findItemById = function findItemById(id){
                 for (var i = items.length - 1; i >= 0; i--) {
@@ -75,14 +78,30 @@
                 var textAttr = isOldIE ? 'innerText' : 'textContent';
                 var text = elm[textAttr];
                 var attr = 'data-nix-item-id';
+                var weightAttr = 'data-nix-item-grams';
                 var item = menu.findItemById(elm.getAttribute(attr));
+                var newWeight = elm.getAttribute(weightAttr);
+                var oldWeight = item ? item.serving_weight : void 0;
+
+
 
                 if (item) {
-                    var calories = (opts.round ? roundCalories(item.calories)
-                                               : item.calories.toFixed(2));
+                    var calories = item.calories;
+
+                    if (newWeight && oldWeight) {
+                        calories = (newWeight/oldWeight)*calories;
+                    }
+
+                    if (opts.round) {
+                        calories = roundCalories(calories);
+                    }
 
                     var postFix = (text.length ? ' '+text
                                                : text);
+
+                    if (opts.toFixed >= 0) {
+                        calories = calories.toFixed(opts.toFixed);
+                    }
 
                     elm[textAttr] =  calories + postFix;
 

@@ -60,7 +60,7 @@
                             <tr>
                                 <th scope="row">2</th>
                                 <td>Uncooked Pizza
-                                    <div class="calories" data-nix-item-id='2-12749'>cal</div>
+                                    <div class="calories" data-nix-item-id='2-12749' data-nix-item-grams='100'>cal</div>
                                 </td>
                                 <td>Uncooked Buger
                                     <div class="calories" data-nix-item-id='2-12750'>cal</div>
@@ -107,11 +107,12 @@
     </div>
     <script type="text/javascript" src="nix-menu.min.js"></script>
     <script type="text/javascript">
-      'use strict';
       (function(){
+        'use strict';
         nutritionixMenu({
           id:9963,
-          round: true
+          round: true,
+          dev: true
         });
       })();
     </script>
